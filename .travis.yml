@@ -13,6 +13,6 @@ install:
   - python prepare_gtest.py
 
 script:
-  - buck/bin/buck test --config cxx.cxx=$(which clang) //:CSSLayout
-  - buck/bin/buck test --config cxx.cxx=$(which clang) //:CSSLayout_java
-  - buck/bin/buck run  --config cxx.cxx=$(which clang) //:benchmark
+  - buck/bin/buck test --config cxx.cxx=$(which $CC) //:CSSLayout
+  - buck/bin/buck test --config cxx.cxx=$(which $CC) //:CSSLayout_java
+  - buck/bin/buck run  --config cxx.cxx=$(which $CC) //:benchmark

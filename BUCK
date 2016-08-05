@@ -19,7 +19,7 @@ GMOCK_OVERRIDE_FLAGS = [
   '-Wno-inconsistent-missing-override',
 ]
 
-COMPILER_FLAGS = BASE_COMPILER_FLAGS + ['-std=c11']
+COMPILER_FLAGS = BASE_COMPILER_FLAGS + ['-std=c++11']
 TEST_COMPILER_FLAGS = BASE_COMPILER_FLAGS + GMOCK_OVERRIDE_FLAGS + ['-std=c++11']
 
 cxx_library(
