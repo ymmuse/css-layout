@@ -12,6 +12,6 @@ install:
   - buck/bin/buck --version
 
 script:
-  - buck/bin/buck test //:CSSLayout
-  - buck/bin/buck test //:CSSLayout_java
-  - buck/bin/buck run  //:benchmark
+  - buck/bin/buck test --config cxx.cxx=$(which $CC) //:CSSLayout
+  - buck/bin/buck test --config cxx.cxx=$(which $CC) //:CSSLayout_java
+  - buck/bin/buck run  --config cxx.cxx=$(which $CC) //:benchmark
