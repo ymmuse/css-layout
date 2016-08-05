@@ -26,7 +26,9 @@ typedef struct CSSCachedMeasurement {
 
 // This value was chosen based on empiracle data. Even the most complicated
 // layouts should not require more than 16 entries to fit within the cache.
-enum { CSS_MAX_CACHED_RESULT_COUNT = 16 };
+enum {
+  CSS_MAX_CACHED_RESULT_COUNT = 16
+};
 
 typedef struct CSSLayout {
   float position[4];
@@ -87,13 +89,9 @@ typedef struct CSSNode {
   CSSNodeListRef children;
   bool isDirty;
 
-  struct CSSNode *nextChild;
+  struct CSSNode* nextChild;
 
-  CSSSize (*measure)(void *context,
-      float width,
-      CSSMeasureMode widthMode,
-      float height,
-      CSSMeasureMode heightMode);
+  CSSSize (*measure)(void *context, float width, CSSMeasureMode widthMode, float height, CSSMeasureMode heightMode);
   void (*print)(void *context);
   void *context;
 } CSSNode;
