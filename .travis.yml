@@ -11,7 +11,6 @@ install:
   - cd -
   - buck/bin/buck --version
   - python prepare_gtest.py
-  - buck fetch //lib/soloader
 
 script:
   - buck/bin/buck test --config cxx.cxx=$(which $CC) //:CSSLayout
