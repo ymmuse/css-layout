@@ -13,4 +13,4 @@ install:
 script:
   - .buck/bin/buck test //:CSSLayout
   - .buck/bin/buck test //:CSSLayout_java
-  - .buck/bin/buck run  //:CSSLayout:benchmark
+  - .buck/bin/buck run  //:benchmark

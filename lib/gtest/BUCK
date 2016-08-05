@@ -36,7 +36,7 @@ cxx_library(
     (gtest_folder, 'src/*.cc'),
   ]),
   header_namespace = '',
-  compiler_flags = COMPILER_FLAGS,
+  # compiler_flags = COMPILER_FLAGS,
   deps = [],
   visibility = [CSSLAYOUT_ROOT],
 )
